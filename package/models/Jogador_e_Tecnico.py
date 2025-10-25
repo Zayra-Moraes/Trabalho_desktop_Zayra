@@ -1,5 +1,5 @@
-from package.models.Pessoa import Pessoa
-from package.models.Equipe import Equipe
+from Pessoa import Pessoa
+from Equipe import Equipe
 
 class Jogador(Pessoa):
     todos_os_jogadores_inscritos=[]
