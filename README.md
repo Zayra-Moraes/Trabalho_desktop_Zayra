@@ -18,4 +18,4 @@ Todo o sistema é interativo e gerenciado por meio de um **menu principal**.
 -  **Exclusão de jogadores e equipes.**
 
 ---
-## link do vídeo mostrando as funcionalidades:
+## link do vídeo mostrando as funcionalidades: https://youtu.be/CuPYFcPIi6s

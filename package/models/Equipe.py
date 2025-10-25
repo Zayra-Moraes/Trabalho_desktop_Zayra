@@ -1,4 +1,4 @@
-from Campeonato import Campeonato
+from package.models.Campeonato import Campeonato
 
 class Equipe():
     todas_equipes_incritas=[]

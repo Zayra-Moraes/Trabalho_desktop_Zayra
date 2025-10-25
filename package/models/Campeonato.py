@@ -1,4 +1,4 @@
-from Partida import Partida
+from package.models.Partida import Partida
 class Campeonato():
     todos_os_campeonatos=[]
     def __init__(self,nome):

@@ -1,9 +1,9 @@
 from package.models.Equipe import Equipe
-from models.Campeonato import Campeonato
-from controllers.Menu_cadastro import Menu_cadastro
-from controllers.Menu_jogador_tecnico import Menu_jogador_tecnico
-from controllers.Menu_equipe import Menu_equipe
-from utils.Functions import validador_int,cabecalho,menu,linha
+from package.models.Campeonato import Campeonato
+from package.controllers.Menu_cadastro import Menu_cadastro
+from package.controllers.Menu_jogador_tecnico import Menu_jogador_tecnico
+from package.controllers.Menu_equipe import Menu_equipe
+from package.utils.Functions import validador_int,cabecalho,menu,linha
 
 
 class Gerenciador():
