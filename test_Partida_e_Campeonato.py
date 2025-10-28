@@ -47,7 +47,6 @@ class teste():
         Santos.add_jogador(p8)
         Santos.add_jogador(p9)
         Santos.add_jogador(p10)
-        Santos.add_jogador(p10)
         Santos.add_jogador(p11)
         Santos.add_jogador(p12)
         Santos.add_jogador(p13)
