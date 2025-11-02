@@ -1,0 +1,18 @@
+[
+
+    {
+        "nome": "Gabriel",
+        "posicao": "ponta",
+        "equipe": "santos",
+        "_idade": 20,
+        "_cpf": 987654321
+    },
+    {
+        "nome": "Maria",
+        "_idade": 20,
+        "_cpf": 123456789012,
+        "posicao": "centro",
+        "equipe": null
+    }
+
+]

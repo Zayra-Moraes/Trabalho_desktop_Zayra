@@ -1,13 +1,38 @@
 from package.models.Pessoa import Pessoa
 from package.models.Equipe import Equipe
+from package.controllers.serialjson import DataRecord
 
 class Jogador(Pessoa):
     todos_os_jogadores_inscritos=[]
-    def __init__(self,nome,_idade,posicao,_cpf):
+    db= DataRecord("jogadores.json")
+    def __init__(self,nome,_idade,posicao,_cpf,equipe=None, from_json=False):
         super().__init__(nome, _idade, _cpf)
         self.posicao=posicao
-        self.equipe=None
+        self.equipe=equipe
         Jogador.todos_os_jogadores_inscritos.append(self)
+        if not from_json:
+            Jogador.db.add(self)
+    
+    
+    @classmethod
+    def carregar_todos(cls):
+        todas_as_equipes = {e.nome: e for e in Equipe.todas_equipes_incritas}
+        cls.todos_os_jogadores_inscritos = []
+
+        for data in cls.db.get_all():
+            if "idade" in data:
+                data["_idade"] = data.pop("idade")
+            if "cpf" in data:
+                data["_cpf"] = data.pop("cpf")
+
+            # transforma string do JSON em objeto Equipe
+            equipe_str = data.get("equipe")
+            if equipe_str:
+                data["equipe"] = todas_as_equipes.get(equipe_str)
+            else:
+                data["equipe"] = None
+
+            cls(**data, from_json=True)
 
     def atualizar_posicao(self,nova_posicao):
         self.posicao=nova_posicao
@@ -16,7 +41,8 @@ class Jogador(Pessoa):
         if self.equipe == None:
             return f'{super().mostrar_dados()} || {self.posicao}'
         else:
-            return f'{super().mostrar_dados()} || {self.posicao} || {self.equipe.nome}'
+            equipe_nome = self.equipe.nome
+            return f'{super().mostrar_dados()} || {self.posicao} || {equipe_nome}'
 
     @classmethod
     def find_jogador(cls,nome):
@@ -33,6 +59,7 @@ class Jogador(Pessoa):
 
         else:
             print(f'O jogador está na equipe {self.equipe.nome}')
+
         
     def excluir_jogador(self):
         if self in self.__class__.todos_os_jogadores_inscritos:
@@ -49,13 +76,17 @@ class Jogador(Pessoa):
         for j in cls.todos_os_jogadores_inscritos:
             print(j.dados_completos())
 
+Jogador.carregar_todos()
+
 class Tecnico(Pessoa):
+    db=DataRecord('tecnicos.json')
     todos_os_tecnicos_incritos=[]
     def __init__(self,nome,_idade,_cpf, licenca):
         super().__init__(nome, _idade, _cpf)
         self._licenca=licenca
         self.equipe=None
         Tecnico.todos_os_tecnicos_incritos.append(self)
+        Tecnico.db.add(self)
     
     def dados_completos(self):
         if self.equipe == None:

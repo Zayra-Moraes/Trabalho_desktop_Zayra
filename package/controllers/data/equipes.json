@@ -1,0 +1,18 @@
+[
+    {
+        "nome": "santos",
+        "ano": 2022,
+        "jogadores": [],
+        "tecnico": null,
+        "pontos": 0,
+        "saldo_de_gols": 0
+    },
+    {
+        "nome": "flamengo",
+        "ano": 2000,
+        "jogadores": [],
+        "tecnico": null,
+        "pontos": 0,
+        "saldo_de_gols": 0
+    }
+]

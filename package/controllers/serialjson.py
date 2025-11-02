@@ -1,19 +1,29 @@
 import json
-class datarecord():
+
+class DataRecord:
     def __init__(self, filename):
-        pass
+        self.__filename = "package/controllers/data/" + filename
+        self.__models = []
+        self.read()
 
-    def read():
-        pass
+    def read(self):
+        try:
+            with open(self.__filename, "r", encoding="utf-8") as fjson:
+                self.__models = json.load(fjson)
+        except FileNotFoundError:
+            print(f"O arquivo {self.__filename} não existe!")
+            self.__models = []
 
-    def verify_name():
-        pass
+    def __write(self, model):
+        self.__models.append(vars(model))
+        self.save()
 
-    def __write():
-        pass
-    
-    def save():
-        pass
+    def save(self):
+        with open(self.__filename, "w", encoding="utf-8") as fjson:
+            json.dump(self.__models, fjson, indent=4, ensure_ascii=False)
 
-    def get_models():
-        pass
+    def add(self, model):
+        self.__write(model)
+
+    def get_all(self):
+        return self.__models

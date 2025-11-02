@@ -1,15 +1,27 @@
 from package.models.Campeonato import Campeonato
+from package.controllers.serialjson import DataRecord
 
 class Equipe():
     todas_equipes_incritas=[]
-    def __init__(self, nome, ano):
+    db=DataRecord('equipes.json')
+    def __init__(self, nome, ano,from_json=False,**kwargs):
         self.nome=nome
         self.ano=ano
-        self.jogadores=[]
-        self.tecnico=None
-        self.pontos=0
-        self.saldo_de_gols=0
-        Equipe.todas_equipes_incritas.append(self)
+        self.jogadores=kwargs.get('jogadores',[])
+        self.tecnico=kwargs.get('tecnico',None)
+        self.pontos=kwargs.get('pontos',0)
+        self.saldo_de_gols=kwargs.get('saldo_de_gols', 0)
+        if self not in Equipe.todas_equipes_incritas:
+            Equipe.todas_equipes_incritas.append(self)
+        if not from_json:
+            Equipe.db.add(self)
+
+    @classmethod
+    def carregar_equipes(cls):
+        for data in cls.db.get_all():
+            nome=data.get('nome')
+            ano=data.get('ano')
+            cls(nome, ano, from_json=True)
 
 
     def _add_pontos(self,ponto):
@@ -90,3 +102,5 @@ class Equipe():
         for e in cls.todas_equipes_incritas:
             print(f'{n} - {e.nome}')
             n+=1
+
+Equipe.carregar_equipes()
