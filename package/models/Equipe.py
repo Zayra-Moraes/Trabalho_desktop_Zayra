@@ -34,14 +34,20 @@ class Equipe():
         print(f'O saldo de gols da equipe é {self.saldo_de_gols}')
 
     def add_jogador(self,jogador):
-        if jogador not in self.jogadores:
-            if len(self.jogadores) < 12:
-                self.jogadores.append(jogador)
-                jogador.equipe=(self)
-            else:
-                print(f'Não é possivel adicionar {jogador} na equipe pois ela já tem 12 jogadores.')
-        else: 
-            print('Jogador já está na equipe.')
+        from package.models.Jogador_e_Tecnico import Jogador
+        j=Jogador.find_jogador(jogador)
+        if j:
+            if jogador not in self.jogadores:
+                if len(self.jogadores) < 12:
+                    self.jogadores.append(jogador)
+                    nome_equipe=self.nome
+                    j.equipe= nome_equipe
+                    j.db.update(j)
+                    self.db.update()
+                else:
+                    print(f'Não é possivel adicionar {jogador} na equipe pois ela já tem 12 jogadores.')
+            else: 
+                print('Jogador já está na equipe.')
 
     def remover_jogador(self, jogador):
         if jogador in self.jogadores:
@@ -64,6 +70,7 @@ class Equipe():
             return f'O tecnico não está nessa equipe'
 
     def mostrar_equipe(self):
+        from package.models.Jogador_e_Tecnico import Jogador
         n=1
         if self.tecnico:
             print(f'Equipe: {self.nome} - {self.ano}')
@@ -74,7 +81,8 @@ class Equipe():
         else:
             print(f'Equipe: {self.nome} - {self.ano}')
             for i in self.jogadores:
-                print(f'{n}- {i.nome}')
+                j=Jogador.find_jogador(i)
+                print(f'{n}- {j.nome}')
                 n+=1
 
     def excluir_equipe(self):
