@@ -10,7 +10,7 @@ class Equipe():
         self.jogadores=kwargs.get('jogadores',[])
         self.tecnico=kwargs.get('tecnico')
         self.pontos=kwargs.get('pontos') or pontos
-        self.saldo_de_gols=kwargs.get('saldo_de_gols', saldo_de_gols)
+        self.saldo_de_gols=kwargs.get('saldo_de_gols') or saldo_de_gols 
         if self not in Equipe.todas_equipes_incritas:
             Equipe.todas_equipes_incritas.append(self)
         if not from_json:
