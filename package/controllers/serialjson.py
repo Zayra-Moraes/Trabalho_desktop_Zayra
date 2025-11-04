@@ -63,6 +63,7 @@ class DataRecord:
 
         self.__models = data
 
+
     def delete(self, obj, key_field="nome"):
         data = self.get_all()
 

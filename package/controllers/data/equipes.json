@@ -10,9 +10,11 @@
     {
         "nome": "flamengo",
         "ano": 2000,
-        "jogadores": [],
-        "tecnico": null,
-        "pontos": 0,
+        "jogadores": [
+            "gabriel"
+        ],
+        "tecnico": "firmino",
+        "pontos": 14,
         "saldo_de_gols": 0
     }
 ]

@@ -98,7 +98,6 @@ class Tecnico(Pessoa):
         self._licenca=licenca
         self.equipe=equipe
         Tecnico.todos_os_tecnicos_incritos.append(self)
-        Tecnico.db.add(self)
         if not from_json:
             Tecnico.db.add(self)
 
@@ -109,6 +108,9 @@ class Tecnico(Pessoa):
                 data["_idade"] = data.pop("idade")
             if "cpf" in data:
                 data["_cpf"] = data.pop("cpf")
+            if "_licenca" in data:
+                data["licenca"] = data.pop("_licenca")
+            cls(**data,from_json=True)
 
     def dados_completos(self):
         if self.equipe == None:
