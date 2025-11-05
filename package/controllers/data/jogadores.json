@@ -54,5 +54,19 @@
         "_cpf": 394823084,
         "posicao": "central",
         "equipe": "flamengo"
+    },
+    {
+        "nome": "Luiza",
+        "_idade": 25,
+        "_cpf": 12345678910,
+        "posicao": "central",
+        "equipe": null
+    },
+    {
+        "nome": "gustavo",
+        "_idade": 35,
+        "_cpf": 12345678990,
+        "posicao": "atacante",
+        "equipe": null
     }
 ]

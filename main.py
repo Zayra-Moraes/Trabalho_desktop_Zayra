@@ -1,5 +1,4 @@
 from package.controllers.Gerenciador import Gerenciador
-from test_Partida_e_Campeonato import teste
 
 def workspace():
     app=Gerenciador()
