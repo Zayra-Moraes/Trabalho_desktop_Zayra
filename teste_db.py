@@ -1,6 +1,7 @@
 from package.models.Jogador_e_Tecnico import Jogador,Tecnico
-from package.models.Equipe import Equipe
+from package.models.Partida import Partida
 from package.controllers.serialjson import DataRecord
+from package.models.Campeonato import Campeonato
 
 #j1=Jogador("Maria", 20, "centro", 123456789012)
 #j2=Jogador('gabriel',21,"ponta", 1234567890)
@@ -14,19 +15,44 @@ from package.controllers.serialjson import DataRecord
 # j3.excluir_jogador()
 # Jogador.listar_jogadores_cadastrados()
 
-f=Equipe.find_equipe('flamengo')
-f.add_jogador('gabriel')
+#f=Equipe.find_equipe('flamengo')
+#f.add_jogador('gabriel')
 #f.add_jogador('Maria')
-f.mostrar_equipe()
+#f.mostrar_equipe()
 # Jogador.listar_jogadores_cadastrados()
 # f._add_pontos(2)
 # f.mostrar_pontos()
 # f.mostrar_equipe()
 # f.remover_jogador('Maria')
-Tecnico.listar_tecnicos_cadastrados()
-f.add_tecnico('firmino')
-Equipe.listar_equipes_cadastradas()
-f.mostrar_equipe()
+#Tecnico.listar_tecnicos_cadastrados()
+#f.add_tecnico('firmino')
+#Equipe.listar_equipes_cadastradas()
+#f.mostrar_equipe()
 #s=Equipe('Barcelona', 1900)
-s=Equipe.find_equipe('Barcelona')
-s.excluir_equipe()
+#s=Equipe.find_equipe('Barcelona')
+#s.excluir_equipe()
+
+#c1=Campeonato('champions')
+#c2=Campeonato('libertadores')
+
+c1=Campeonato.find_campeonato('champions')
+Campeonato.listar_todos_campeonatos()
+#c1.add_equipe('botafogo')
+#c1.add_equipe('flamengo')
+c1.mostrar_equipes()
+#c1.remover_equipe('flamengo')
+# p3=Jogador('p3',20, 'central',938724894)
+# p4=Jogador('p4',20, 'central', 39493443)
+# p5=Jogador('p5',23, 'central', 3425455)
+# p6=Jogador('p6',33, 'central', 8957485)
+# p7=Jogador('p7', 22, 'central', 34245325)
+# zayra=Jogador('Zayra',19,'central',394823084)
+#f.add_jogador('zayra')
+# f.add_jogador('p3')
+# f.add_jogador('p4')
+# f.add_jogador('p5')
+# f.add_jogador('p6')
+# f.add_jogador('p7')
+# f.add_tecnico('t1')
+
+c1.criar_partida('botafogo','flamengo','2x1')

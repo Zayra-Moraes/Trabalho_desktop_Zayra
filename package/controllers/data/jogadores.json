@@ -12,5 +12,47 @@
         "_cpf": 12345,
         "posicao": "goleiro",
         "equipe": "flamengo"
+    },
+    {
+        "nome": "p3",
+        "_idade": 20,
+        "_cpf": 938724894,
+        "posicao": "central",
+        "equipe": "flamengo"
+    },
+    {
+        "nome": "p4",
+        "_idade": 20,
+        "_cpf": 39493443,
+        "posicao": "central",
+        "equipe": "flamengo"
+    },
+    {
+        "nome": "p5",
+        "_idade": 23,
+        "_cpf": 3425455,
+        "posicao": "central",
+        "equipe": "flamengo"
+    },
+    {
+        "nome": "p6",
+        "_idade": 33,
+        "_cpf": 8957485,
+        "posicao": "central",
+        "equipe": "flamengo"
+    },
+    {
+        "nome": "p7",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "flamengo"
+    },
+    {
+        "nome": "Zayra",
+        "_idade": 19,
+        "_cpf": 394823084,
+        "posicao": "central",
+        "equipe": "flamengo"
     }
 ]

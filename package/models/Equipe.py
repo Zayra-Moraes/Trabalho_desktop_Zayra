@@ -16,12 +16,6 @@ class Equipe():
         if not from_json:
             Equipe.db.add(self)
 
-    # @classmethod
-    # def carregar_equipes(cls):
-    #     for data in cls.db.get_all():
-    #         nome=data.get('nome')
-    #         ano=data.get('ano')
-    #         cls(nome, ano, from_json=True)
         
     @classmethod
     def carregar_equipes(cls):

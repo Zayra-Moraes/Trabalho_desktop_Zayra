@@ -11,10 +11,32 @@
         "nome": "flamengo",
         "ano": 2000,
         "jogadores": [
-            "gabriel"
+            "gabriel",
+            "zayra",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7"
         ],
         "tecnico": "firmino",
         "pontos": 14,
         "saldo_de_gols": 0
+    },
+    {
+        "nome": "botafogo",
+        "ano": 2000,
+        "jogadores": [
+            "gabriel",
+            "zayra",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7"
+        ],
+        "tecnico": "firmino",
+        "pontos": 26,
+        "saldo_de_gols": 12
     }
 ]
