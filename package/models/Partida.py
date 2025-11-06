@@ -1,5 +1,6 @@
 from package.controllers.serialjson import DataRecord
 class Partida():
+
     todas_as_partidas=[]    
     db=DataRecord('partidas.json')
     def __init__(self, equipe1, equipe2,gols_e1=0,gols_e2=0, vencedor=None):
@@ -28,7 +29,8 @@ class Partida():
             for p in camp.get("partidas", []):
                 partida=cls(**p)
                 cls.todas_as_partidas.append(partida)
-    
+
+
     def _definir_placar(self, resultado_e1, resultado_e2):
         from package.models.Equipe import Equipe
         e1=Equipe.find_equipe(self.equipe1)

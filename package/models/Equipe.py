@@ -53,19 +53,21 @@ class Equipe():
 
     def add_jogador(self,jogador):
         from package.models.Jogador_e_Tecnico import Jogador
-        j=Jogador.find_jogador(jogador)
-        if j:  
+        if jogador:
             if jogador not in self.jogadores:
                 if len(self.jogadores) < 12:
-                    self.jogadores.append(jogador)
+                    nome_jogador=jogador.nome
+                    self.jogadores.append(nome_jogador)
                     nome_equipe=self.nome
-                    j.equipe= nome_equipe
-                    j.db.update(j)
+                    jogador.equipe= nome_equipe
+                    jogador.db.update(jogador)
                     self.db.update(self)
+
                 else:
                     print(f'Não é possivel adicionar {jogador} na equipe pois ela já tem 12 jogadores.')
-            else: 
+            else:
                 print('Jogador já está na equipe.')
+
 
     def remover_jogador(self, jogador):
         from package.models.Jogador_e_Tecnico import Jogador
