@@ -45,9 +45,9 @@ class Jogador(Pessoa):
             return f'{super().mostrar_dados()} || {self.posicao} || {equipe_nome}'
 
     @classmethod
-    def find_jogador(cls,nome):
+    def find_jogador(cls,nome1):
         for j in cls.todos_os_jogadores_inscritos:
-            if j.nome.lower() == nome.lower():
+            if j.nome.lower() == nome1.lower():
                 #print(j.dados_completos())
                 return j            
         #print(f'Nenhum jogador com esse nome encontrado.')

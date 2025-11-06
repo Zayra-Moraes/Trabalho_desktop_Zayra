@@ -16,6 +16,12 @@ class Equipe():
         if not from_json:
             Equipe.db.add(self)
 
+    # @classmethod
+    # def carregar_equipes(cls):
+    #     for data in cls.db.get_all():
+    #         nome=data.get('nome')
+    #         ano=data.get('ano')
+    #         cls(nome, ano, from_json=True)
         
     @classmethod
     def carregar_equipes(cls):
@@ -53,6 +59,7 @@ class Equipe():
 
     def add_jogador(self,jogador):
         from package.models.Jogador_e_Tecnico import Jogador
+        #j=Jogador.find_jogador(jogador)
         if jogador:
             if jogador not in self.jogadores:
                 if len(self.jogadores) < 12:
@@ -65,9 +72,8 @@ class Equipe():
 
                 else:
                     print(f'Não é possivel adicionar {jogador} na equipe pois ela já tem 12 jogadores.')
-            else:
+            else: 
                 print('Jogador já está na equipe.')
-
 
     def remover_jogador(self, jogador):
         from package.models.Jogador_e_Tecnico import Jogador

@@ -8,9 +8,10 @@
     },
     {
         "nome": "gabriel",
-        "_idade": 25,
+        "_idade": "45",
         "_cpf": 12345,
         "posicao": "goleiro",
+<<<<<<< Updated upstream
         "equipe": "flamengo"
     },
     {
@@ -67,6 +68,15 @@
         "_idade": 35,
         "_cpf": 12345678990,
         "posicao": "atacante",
+=======
+        "equipe": "santos"
+    },
+    {
+        "nome": "gabriel ",
+        "_idade": 20,
+        "_cpf": 8250787170,
+        "posicao": "lateral ",
+>>>>>>> Stashed changes
         "equipe": null
     }
 ]

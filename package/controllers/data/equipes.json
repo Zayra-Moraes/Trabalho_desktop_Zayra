@@ -1,14 +1,6 @@
 [
     {
         "nome": "santos",
-        "ano": 2022,
-        "jogadores": [],
-        "tecnico": null,
-        "pontos": 0,
-        "saldo_de_gols": 0
-    },
-    {
-        "nome": "flamengo",
         "ano": 2000,
         "jogadores": [
             "gabriel",
@@ -19,8 +11,8 @@
             "p6",
             "p7"
         ],
-        "tecnico": "firmino",
-        "pontos": 14,
+        "tecnico": null,
+        "pontos": 0,
         "saldo_de_gols": 0
     },
     {
