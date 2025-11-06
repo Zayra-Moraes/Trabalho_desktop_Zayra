@@ -54,8 +54,8 @@ class teste():
 
 
         #adicionar equipes no campeonato:
-        champions.add_equipe(flamengo)
-        champions.add_equipe(Santos) 
+        champions.add_equipe('flamengo')
+        champions.add_equipe('Santos')
 #        champions.mostrar_equipes()
         #Aqui vai precisar de um input para o placar da partida, que posteriormente vai se comunicar com o menu
         #como apenas estamos testando a função, agora ela é um input

@@ -82,27 +82,25 @@ class Equipe():
 
     def add_tecnico(self,tecnico):
         from package.models.Jogador_e_Tecnico import Tecnico
-        t=Tecnico.find_tecnico(tecnico)
+        #t=Tecnico.find_tecnico(tecnico)
         if self.tecnico == None:
-            if t:
-                self.tecnico=tecnico
-                t.equipe= self.nome
-                t.db.update(t)
-                Equipe.db.update(self)
-            else:
-                print('Técnico não encontrado')
+            nome_tecnico=tecnico.nome
+            self.tecnico=nome_tecnico
+            tecnico.equipe= self.nome
+            tecnico.db.update(tecnico)
+            Equipe.db.update(self)
+
         else:
             nome_t_antigo=self.tecnico
             t_antigo=Tecnico.find_tecnico(nome_t_antigo)
             t_antigo.equipe=None
             t_antigo.db.update(t_antigo)
-            if t:
-                self.tecnico=tecnico
-                t.equipe= self.nome
-                t.db.update(t)
-                Equipe.db.update(self)
-            else:
-                print('Técnico não encontrado')
+            #tecnico novo
+            self.tecnico=tecnico.nome
+            tecnico.equipe= self.nome
+            tecnico.db.update(tecnico)
+            Equipe.db.update(self)
+
 
     def remover_tecnico(self, tecnico):
         from package.models.Jogador_e_Tecnico import Tecnico

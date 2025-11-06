@@ -1,16 +1,16 @@
 [
     {
-        "nome": "Maria",
-        "_idade": 20,
-        "_cpf": 123456789012,
-        "posicao": "centro",
-        "equipe": null
+        "nome": "Zayra",
+        "_idade": 19,
+        "_cpf": 394823084,
+        "posicao": "central",
+        "equipe": "flamengo"
     },
     {
-        "nome": "gabriel",
-        "_idade": "45",
-        "_cpf": 12345,
-        "posicao": "goleiro",
+        "nome": "Gabriel",
+        "_idade": 20,
+        "_cpf": 3827490,
+        "posicao": "ponta",
         "equipe": "flamengo"
     },
     {
@@ -49,31 +49,59 @@
         "equipe": "flamengo"
     },
     {
-        "nome": "Zayra",
+        "nome": "Mary",
         "_idade": 19,
-        "_cpf": 394823084,
-        "posicao": "central",
-        "equipe": "flamengo"
-    },
-    {
-        "nome": "Luiza",
-        "_idade": 25,
-        "_cpf": 12345678910,
-        "posicao": "central",
-        "equipe": null
-    },
-    {
-        "nome": "gustavo",
-        "_idade": 35,
-        "_cpf": 12345678990,
-        "posicao": "atacante",
+        "_cpf": 39248094,
+        "posicao": "ponta",
         "equipe": "santos"
     },
     {
-        "nome": "gabriel ",
-        "_idade": 20,
-        "_cpf": 8250787170,
-        "posicao": "lateral ",
-        "equipe": null
+        "nome": "Dani",
+        "_idade": 19,
+        "_cpf": 3904824,
+        "posicao": "armação",
+        "equipe": "santos"
+    },
+    {
+        "nome": "p8",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "santos"
+    },
+    {
+        "nome": "p9",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "santos"
+    },
+    {
+        "nome": "p10",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "santos"
+    },
+    {
+        "nome": "p11",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "santos"
+    },
+    {
+        "nome": "p12",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "santos"
+    },
+    {
+        "nome": "p13",
+        "_idade": 22,
+        "_cpf": 34245325,
+        "posicao": "central",
+        "equipe": "santos"
     }
 ]

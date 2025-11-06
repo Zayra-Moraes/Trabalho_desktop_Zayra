@@ -1,34 +1,35 @@
 [
     {
         "nome": "flamengo",
-        "ano": 2000,
+        "ano": 2025,
         "jogadores": [
-            "gabriel",
-            "zayra",
+            "Zayra",
+            "Gabriel",
             "p3",
             "p4",
             "p5",
             "p6",
             "p7"
         ],
-        "tecnico": null,
+        "tecnico": "t2",
         "pontos": 0,
         "saldo_de_gols": 0
     },
     {
-        "nome": "botafogo",
-        "ano": 2000,
+        "nome": "santos",
+        "ano": 2024,
         "jogadores": [
-            "gabriel",
-            "zayra",
-            "p3",
-            "p4",
-            "p5",
-            "p6",
-            "p7"
+            "Mary",
+            "Dani",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13"
         ],
-        "tecnico": "firmino",
-        "pontos": 46,
-        "saldo_de_gols": 32
+        "tecnico": "t1",
+        "pontos": 0,
+        "saldo_de_gols": 0
     }
 ]
