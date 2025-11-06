@@ -28,7 +28,6 @@ class Campeonato():
                 from_json=True
             )
 
-            campeonato.partidas=[Partida(**p)for  p in partidas]
 
 
     def add_equipe(self,equipe):
@@ -62,7 +61,7 @@ class Campeonato():
         from package.models.Equipe import Equipe
         if equipe1 in self.equipes and equipe2 in self.equipes:
             partida=Partida(equipe1,equipe2)
-            self.partidas.append(partida)
+            self.partidas.append(partida.to_dict())
             e1=Equipe.find_equipe(equipe1)
             e2=Equipe.find_equipe(equipe2)
             while True:
@@ -91,13 +90,17 @@ class Campeonato():
             n+=1
 
     def mostrar_partidas(self):
+        from package.models.Partida import Partida
         n=1
         print('PARTIDAS:')
         for i in self.partidas:
-            print(f'{n}°: {i.mostrar_placar()}')
+            p=Partida.find_partida(i["id"])
+            print(f'{n}°: {p.mostrar_placar()}')
             n+=1
 
-    def _ordenacao(self,e):
+    def _ordenacao(self,nome_equipes):
+        from package.models.Equipe import Equipe
+        e=Equipe.find_equipe(nome_equipes)
         return (e.pontos, e.saldo_de_gols)
 
     def tabela_de_classificacao(self):

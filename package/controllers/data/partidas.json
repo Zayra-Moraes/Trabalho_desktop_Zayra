@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": null,
+        "gols_e1": 2,
+        "gols_e2": 3
+    },
+    {
+        "id": 2,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": null,
+        "gols_e1": 0,
+        "gols_e2": 0
+    },
+    {
+        "id": 3,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": null,
+        "gols_e1": 0,
+        "gols_e2": 0
+    },
+    {
+        "id": 4,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": null,
+        "gols_e1": 0,
+        "gols_e2": 0
+    },
+    {
+        "id": 5,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": null,
+        "gols_e1": 0,
+        "gols_e2": 0
+    },
+    {
+        "id": 6,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": "botafogo",
+        "gols_e1": 2,
+        "gols_e2": 1
+    },
+    {
+        "id": 7,
+        "equipe1": "botafogo",
+        "equipe2": "flamengo",
+        "vencedor": "botafogo",
+        "gols_e1": 2,
+        "gols_e2": 1
+    }
+]

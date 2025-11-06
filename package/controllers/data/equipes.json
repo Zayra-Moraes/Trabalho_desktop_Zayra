@@ -1,6 +1,6 @@
 [
     {
-        "nome": "santos",
+        "nome": "flamengo",
         "ano": 2000,
         "jogadores": [
             "gabriel",
@@ -28,7 +28,7 @@
             "p7"
         ],
         "tecnico": "firmino",
-        "pontos": 26,
-        "saldo_de_gols": 12
+        "pontos": 46,
+        "saldo_de_gols": 32
     }
 ]

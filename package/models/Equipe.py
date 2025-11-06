@@ -16,12 +16,6 @@ class Equipe():
         if not from_json:
             Equipe.db.add(self)
 
-    # @classmethod
-    # def carregar_equipes(cls):
-    #     for data in cls.db.get_all():
-    #         nome=data.get('nome')
-    #         ano=data.get('ano')
-    #         cls(nome, ano, from_json=True)
         
     @classmethod
     def carregar_equipes(cls):
@@ -58,7 +52,6 @@ class Equipe():
         print(f'O saldo de gols da equipe é {self.saldo_de_gols}')
 
     def add_jogador(self,jogador):
-        from package.models.Jogador_e_Tecnico import Jogador
         #j=Jogador.find_jogador(jogador)
         if jogador:
             if jogador not in self.jogadores:
@@ -124,7 +117,7 @@ class Equipe():
             return f'O tecnico não está nessa equipe'
 
     def mostrar_equipe(self):
-        from package.models.Jogador_e_Tecnico import Jogador,Tecnico
+        from package.models.Jogador_e_Tecnico import Jogador
         n=1
         if self.tecnico:
             print(f'Equipe: {self.nome} - {self.ano}')
@@ -140,7 +133,7 @@ class Equipe():
                 n+=1
 
     def excluir_equipe(self):
-        from package.models.Jogador_e_Tecnico import Jogador,Tecnico
+        from package.models.Jogador_e_Tecnico import Jogador
         if self in self.__class__.todas_equipes_incritas:
             self.__class__.todas_equipes_incritas.remove(self)
             for j in Jogador.todos_os_jogadores_inscritos:

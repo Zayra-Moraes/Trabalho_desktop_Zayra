@@ -55,4 +55,9 @@ c1.mostrar_equipes()
 # f.add_jogador('p7')
 # f.add_tecnico('t1')
 
-c1.criar_partida('botafogo','flamengo','2x1')
+# c1.criar_partida('botafogo','flamengo','2x1')
+# p1=Partida.find_partida(1)
+# print(p1.mostrar_placar())
+# p1.mostrar_vencedor()
+
+c1.tabela_de_classificacao()
