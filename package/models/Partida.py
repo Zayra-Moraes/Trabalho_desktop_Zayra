@@ -3,9 +3,13 @@ class Partida():
     contador=0
     todas_as_partidas=[]    
     db=DataRecord('partidas.json')
-    def __init__(self, equipe1, equipe2,gols_e1=0,gols_e2=0, vencedor=None,from_json=False,**kwargs):
-        Partida.contador+=1
-        self.id=Partida.contador
+    def __init__(self,equipe1, equipe2,gols_e1=0,gols_e2=0, vencedor=None,id=None,from_json=False,**kwargs):
+        if from_json:
+            self.id=id
+            Partida.contador=max(Partida.contador,id)
+        else:
+            Partida.contador+=1
+            self.id=Partida.contador
         self.equipe1=equipe1
         self.equipe2=equipe2
         self.vencedor=kwargs.get('vencedor') or vencedor
@@ -20,10 +24,6 @@ class Partida():
     def save_partida(cls):
         pass
 
-    def to_dict(self):
-        return {
-            "id": self.id,
-        }
 
     @classmethod
     def carregar_todos(cls):
@@ -34,7 +34,8 @@ class Partida():
             gols_e1 = data.get('gols_e1')
             gols_e2 = data.get('gols_e2')
             vencedor = data.get('vencedor')
-            partida=cls(equipe1, equipe2, gols_e1, gols_e2, vencedor,from_json=True)
+            id=data.get('id')
+            partida=cls(equipe1, equipe2, gols_e1, gols_e2, vencedor,id,from_json=True)
             cls.todas_as_partidas.append(partida)
 
 

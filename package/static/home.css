@@ -1,0 +1,21 @@
+footer{
+
+}
+
+.container.mt-4{
+    text-align: center;
+}
+
+.btn-primary{
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: black;
+    color: white;
+}
+

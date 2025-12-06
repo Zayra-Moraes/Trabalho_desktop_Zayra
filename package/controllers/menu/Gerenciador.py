@@ -1,8 +1,8 @@
 from package.models.Equipe import Equipe
 from package.models.Campeonato import Campeonato
-from package.controllers.Menu_cadastro import Menu_cadastro
-from package.controllers.Menu_jogador_tecnico import Menu_jogador_tecnico
-from package.controllers.Menu_equipe import Menu_equipe
+from package.controllers.menu.Menu_cadastro import Menu_cadastro
+from package.controllers.menu.Menu_jogador_tecnico import Menu_jogador_tecnico
+from package.controllers.menu.Menu_equipe import Menu_equipe
 from package.utils.Functions import validador_int,cabecalho,menu,linha
 
 
@@ -149,7 +149,7 @@ class Gerenciador():
             e_2=Equipe.find_equipe(e2)
             if e_1 and e_2:
                 placar=input(f"Por favor inserir o placar final da partida: (no formato '2x1')")
-                c.criar_partida(e_1,e_2,placar)
+                c.criar_partida(e1,e2,placar)
                 break
             else:
                 print('Alguma equipe não encontrada')

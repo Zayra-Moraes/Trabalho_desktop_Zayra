@@ -1,4 +1,4 @@
-from package.controllers.Gerenciador import Gerenciador
+from package.controllers.menu.Gerenciador import Gerenciador
 
 def workspace():
     app=Gerenciador()

@@ -61,7 +61,7 @@ class Campeonato():
         from package.models.Equipe import Equipe
         if equipe1 in self.equipes and equipe2 in self.equipes:
             partida=Partida(equipe1,equipe2)
-            self.partidas.append(partida.to_dict())
+            self.partidas.append(partida.id)
             e1=Equipe.find_equipe(equipe1)
             e2=Equipe.find_equipe(equipe2)
             while True:
@@ -111,6 +111,19 @@ class Campeonato():
         for posicao, equipe in enumerate(ranking,start=1):
             e=Equipe.find_equipe(equipe)
             print(f"{posicao:<10}{e.nome:<15}{e.pontos:<10}{e.saldo_de_gols}")
+
+    def tabela_de_posicoes(self):
+        from package.models.Equipe import Equipe
+        tabela=[]
+        ranking=sorted(self.equipes, key=self._ordenacao, reverse=True)
+        for posicao, equipe in enumerate(ranking,start=1):
+            e=Equipe.find_equipe(equipe)
+            tabela.append({
+                'posicao' : posicao,
+                'nome': e.nome,
+                'pontos' :e.pontos,
+                'saldo': e.saldo_de_gols})
+        return tabela
     
     def excluir_campeonato(self):
         if self in self.__class__.todos_os_campeonatos:
@@ -136,5 +149,6 @@ class Campeonato():
         for c in cls.todos_os_campeonatos:
             print(f'{n} - {c.nome}')
         n+=1
+
 
 Campeonato.carregar_todos()
