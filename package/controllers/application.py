@@ -1,12 +1,17 @@
 from bottle import template
 
 from package.models.Campeonato import Campeonato
+from package.models.Equipe import Equipe
+from package.models.Jogador_e_Tecnico import Jogador, Tecnico
 
 
 class Application():
     def __init__(self):
         self.pages= {
-            'home_page' :self.home_page
+            'home_page' :self.home_page,
+            'equipes' : self.equipes,
+            'atletas': self.atletas,
+            'tecnicos': self.tecnicos
         }
 
     def render(self, page):
@@ -16,3 +21,15 @@ class Application():
     def home_page(self):
         campeonatos=Campeonato.todos_os_campeonatos
         return template('home_page', campeonatos=campeonatos)
+
+    def equipes(self):
+        equipe=Equipe.todas_equipes_incritas
+        return template('equipes', equipe=equipe)
+
+    def atletas(self):
+        jogadores=Jogador.todos_os_jogadores_inscritos
+        return template('atletas', jogadores=jogadores)
+
+    def tecnicos(self):
+        tecnicos=Tecnico.todos_os_tecnicos_incritos
+        return template('tecnicos', tecnicos=tecnicos)

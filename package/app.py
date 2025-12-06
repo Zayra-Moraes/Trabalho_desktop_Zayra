@@ -3,6 +3,7 @@ from bottle import template
 
 from package.controllers.application import Application
 from package.models.Campeonato import Campeonato
+from package.models.Partida import Partida
 
 app=Bottle()
 ctl=Application()
@@ -18,14 +19,23 @@ def home(): return ctl.render('home_page')
 @app.route('/campeonato/<nome>', method='GET')
 def campeonato(nome):
     campeonato=Campeonato.find_campeonato(nome)
-    partidas=campeonato.partidas
+    partidas=[]
+    for p in campeonato.partidas:
+        partida=Partida.find_partida(p)
+        if partida:
+            partidas.append(partida.to_dict())
     classificacao=campeonato.tabela_de_posicoes()
     return template('campeonato',campeonato=campeonato,partidas=partidas,classificacao=classificacao)
 
+@app.route('/equipes', method='GET')
+def equipes(): return ctl.render('equipes')
+
+
+@app.route('/cadastro/Atletas', method='GET')
+def atletas(): return ctl.render('atletas')
+
+@app.route('/cadastro/Técnicos', method='GET')
+def tecnicos(): return ctl.render('tecnicos')
+
 
 run(app, host='127.0.0.1', port=8080, debug=True,reloader=True)
-
-# @app.route('/')
-# def home(): return template("home_page")
-#
-# run(app,host='127.0.0.1',port=8080,debug=True)

@@ -1,5 +1,6 @@
 from package.models.Partida import Partida
 from package.controllers.serialjson import DataRecord
+from package.models.EquipeCampeonato import EquipeCampeonato
 
 class Campeonato():
     todos_os_campeonatos=[]
@@ -36,6 +37,9 @@ class Campeonato():
         if e:
             if len(e.jogadores) >= 7 and e.tecnico != None:
                 self.equipes.append(equipe)
+                e_=EquipeCampeonato.find_equipe_campeonato(e.nome,self.nome)
+                if e_ is None:
+                    ec = EquipeCampeonato(e.nome, self.nome)
                 self.db.update(self)
             elif len(e.jogadores) < 7:
                 print(f'A equipe tem menos de 7 jogadores e não pode ser incrita no campeonato.')
@@ -60,8 +64,10 @@ class Campeonato():
     def criar_partida(self,equipe1,equipe2,placar):
         from package.models.Equipe import Equipe
         if equipe1 in self.equipes and equipe2 in self.equipes:
-            partida=Partida(equipe1,equipe2)
+            partida=Partida(equipe1,equipe2,campeonato=self.nome)
             self.partidas.append(partida.id)
+            e_1=EquipeCampeonato(equipe1,self.nome)
+            e_2=EquipeCampeonato(equipe2,self.nome)
             e1=Equipe.find_equipe(equipe1)
             e2=Equipe.find_equipe(equipe2)
             while True:
@@ -115,9 +121,9 @@ class Campeonato():
     def tabela_de_posicoes(self):
         from package.models.Equipe import Equipe
         tabela=[]
-        ranking=sorted(self.equipes, key=self._ordenacao, reverse=True)
+        ranking=sorted(self.equipes, key=self._ordenacao, reverse=False)
         for posicao, equipe in enumerate(ranking,start=1):
-            e=Equipe.find_equipe(equipe)
+            e=EquipeCampeonato.find_equipe_campeonato(equipe,self.nome)
             tabela.append({
                 'posicao' : posicao,
                 'nome': e.nome,

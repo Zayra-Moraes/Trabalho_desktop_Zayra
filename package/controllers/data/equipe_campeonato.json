@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "flamengo",
+        "campeonato": "Champions",
+        "pontos": 0,
+        "saldo_de_gols": 0
+    },
+    {
+        "nome": "Santos",
+        "campeonato": "Champions",
+        "pontos": 0,
+        "saldo_de_gols": 0
+    }
+]

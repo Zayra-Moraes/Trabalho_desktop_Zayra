@@ -8,7 +8,7 @@
     <link rel="icon" href="/static/img/black_2.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="/static/campeonato.css" rel="stylesheet">
-    <title>{{campeonato.nome}}</title>
+    <title>Atletas</title>
 </head>
 <body>
 
@@ -52,52 +52,31 @@
     </nav>
     <main class="flex-grow-1">
         <div class="container classificacao">
-            <br><h3 class="text-center">Tabela de Classificação</h3>
+            <br><h3 class="text-center">Equipes cadastradas</h3>
 
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Pos.</th>
-                        <th>Equipe</th>
-                        <th>Pontos</th>
-                        <th>Saldo</th>
+                        <th>nome</th>
+                        <th>idade</th>
+                        <th>licença</th>
+                        <th>equipe</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    % for linha in classificacao:
+                    % for j in tecnicos:
                     <tr>
-                        <td>{{linha['posicao']}}</td>
-                        <td>{{linha['nome']}}</td>
-                        <td>{{linha['pontos']}}</td>
-                        <td>{{linha['saldo']}}</td>
+                        <td>{{j.nome}}</td>
+                        <td>{{j._idade}}</td>
+                        <td>{{j._licenca}}</td>
+                        <td>{{j.equipe}}</td>
                     </tr>
                     % end
                 </tbody>
             </table>
         </div>
 
-        <div class="container partidas mt-5">
-            <h3 class="mb-3 text-center">Partidas Realizadas</h3>
-
-            <div class="row">
-                % for p in partidas:
-                <div class="col-md-4">
-                    <div class="partida-card">
-                        <h5>{{p['equipe1']}} x {{p['equipe2']}}</h5>
-                        <p class="placar">{{p['gols_e1']}} x {{p['gols_e2']}}</p>
-                        <small class="vencedor">
-                            % if p['vencedor'] == 'empate':
-                                Empate
-                            % else:
-                                Vencedor: {{p['vencedor']}}
-                            % end
-                        </small>
-                    </div>
-                </div>
-                % end
-            </div>
-        </div>
 
     </main>
     <div style="height: 200px;"></div>

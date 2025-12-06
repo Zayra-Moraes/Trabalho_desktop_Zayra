@@ -2,34 +2,10 @@
     {
         "nome": "Champions",
         "partidas": [
-            2,
-            3,
-            4
         ],
         "equipes": [
             "flamengo",
             "Santos"
         ]
-    },
-    {
-        "nome": "Final_fours",
-        "partidas": [],
-        "equipes": [
-            "flamengo",
-            "Santos"
-        ]
-    },
-    {
-        "nome": "Libertadores",
-        "partidas": [],
-        "equipes": [
-            "flamengo",
-            "Santos"
-        ]
-    },
-    {
-        "nome": "teste",
-        "partidas": [],
-        "equipes": []
     }
 ]

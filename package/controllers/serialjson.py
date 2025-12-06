@@ -2,7 +2,7 @@ import json
 
 class DataRecord:
     def __init__(self, filename):
-        self.__filename = "package/controllers/data/" + filename
+        self.__filename = "controllers/data/" + filename
         self.__models = []
         self.read()
 

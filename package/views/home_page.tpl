@@ -17,25 +17,25 @@
           <img src="static/img/black_2.png" width="80" height="60">
         </a>
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CampManager</a>
+        <a class="navbar-brand" href="/">CampManager</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Campeonatos</a>
+              <a class="nav-link active" aria-current="page" href="/">Campeonatos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Equipes</a>
+              <a class="nav-link" href="/equipes">Equipes</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Cadastrados
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Atletas</a></li>
-                <li><a class="dropdown-item" href="#">Técnicos</a></li>
+                <li><a class="dropdown-item" href="/cadastro/Atletas">Atletas</a></li>
+                <li><a class="dropdown-item" href="/cadastro/Técnicos">Técnicos</a></li>
     <!--            <li><hr class="dropdown-divider"></li>-->
     <!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
               </ul>
@@ -50,7 +50,7 @@
     </nav>
     <main class="flex-grow-1">
         <div class="container mt-4">
-            <h2 class="mb-4">Campeonatos Disponíveis</h2>
+            <h2 class="mb-4">Campeonatos em andamento</h2>
 
             <div class="row">
                 % for c in campeonatos:
@@ -69,25 +69,26 @@
             </div>
         </div>
     </main>
+    <div style="height: 200px;"></div>
 
     <footer class="bg-dark text-white pt-4 pb-3 small">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-4">
-                    <h5>CampManager</h5>
+                    <h5 class="text-center">CampManager</h5>
                     <p>Gerencie campeonatos, equipes e atletas rapidamente usando o CampManager, sem mais estresse para saber quem está ganhando!</p>
                 </div>
 
                 <div class="col-md-4">
-                    <h5>Links úteis</h5>
-                    <ul class="list-unstyled">
+                    <h5 class="text-center">Links úteis</h5>
+                    <ul class="list-unstyled text-center">
                         <li><a href="#" class="text-white">Vídeo_Nível4</a></li>
-                        <li><a href="#" class="text-white">GitHub</a></li>
+                        <li><a href="https://github.com/Zayra-Moraes/Trabalho_desktop_Zayra" class="text-white">GitHub</a></li>
                     </ul>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                     <h5>Contato</h5>
                     <p>Email: zayramoraes1212@gmail.com</p>
                 </div>

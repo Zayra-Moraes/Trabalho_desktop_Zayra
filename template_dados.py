@@ -1,4 +1,5 @@
 from package.models.Campeonato import Campeonato
+from package.models.EquipeCampeonato import EquipeCampeonato
 from package.models.Partida import Partida
 from package.models.Jogador_e_Tecnico import Jogador,Tecnico
 from package.models.Equipe import Equipe
@@ -67,5 +68,9 @@ class teste():
 #        champions.tabela_de_classificacao()
 
 c1=Campeonato.find_campeonato('Champions')
+# c1.add_equipe('Santos')
 c1.mostrar_equipes()
-c1.criar_partida('flamengo', 'Santos','2x1')
+# e=EquipeCampeonato.find_equipe_campeonato('Santos','Champions')
+# print(e)
+c1.criar_partida('flamengo','Santos','2x6')
+
