@@ -13,7 +13,7 @@
 
   <div class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="static/img/black_2.png" width="80" height="60">
         </a>
       <div class="container-fluid">
@@ -47,6 +47,16 @@
           </form>
         </div>
       </div>
+      <div clas="navbar login">
+          <a href="/login">
+          <button type="button" class="btn btn-outline-light">login</button></a>
+      </div>
+      <div style="padding: 10px "></div>
+      <div class="navbar login">
+          <a href="/cadastro">
+          <button type="button" class="btn btn-outline-light">cadastrar</button></a>
+      </div>
+      <div style="padding:10px"></div>
     </nav>
     <main class="flex-grow-1">
         <div class="container mt-4">

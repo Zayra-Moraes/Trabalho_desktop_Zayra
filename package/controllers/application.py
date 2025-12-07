@@ -11,7 +11,9 @@ class Application():
             'home_page' :self.home_page,
             'equipes' : self.equipes,
             'atletas': self.atletas,
-            'tecnicos': self.tecnicos
+            'tecnicos': self.tecnicos,
+            'login': self.login,
+            'cadastro': self.cadastro
         }
 
     def render(self, page):
@@ -33,3 +35,9 @@ class Application():
     def tecnicos(self):
         tecnicos=Tecnico.todos_os_tecnicos_incritos
         return template('tecnicos', tecnicos=tecnicos)
+
+    def login(self):
+        return template('login')
+
+    def cadastro(self):
+        return template('cadastro')

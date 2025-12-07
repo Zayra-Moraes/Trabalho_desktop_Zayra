@@ -119,16 +119,32 @@ class Campeonato():
             print(f"{posicao:<10}{e.nome:<15}{e.pontos:<10}{e.saldo_de_gols}")
 
     def tabela_de_posicoes(self):
-        from package.models.Equipe import Equipe
-        tabela=[]
-        ranking=sorted(self.equipes, key=self._ordenacao, reverse=False)
-        for posicao, equipe in enumerate(ranking,start=1):
-            e=EquipeCampeonato.find_equipe_campeonato(equipe,self.nome)
+        # Lista de equipes **dentro do campeonato**
+        equipes_campeonato = [
+            EquipeCampeonato.find_equipe_campeonato(equipe, self.nome)
+            for equipe in self.equipes
+        ]
+
+        # remove possíveis None
+        equipes_campeonato = [e for e in equipes_campeonato if e]
+
+        # Ordenar pelas pontuações DO CAMPEONATO
+        ranking = sorted(
+            equipes_campeonato,
+            key=lambda e: (e.pontos, e.saldo_de_gols),
+            reverse=True
+        )
+
+        # Construir tabela
+        tabela = []
+        for posicao, e in enumerate(ranking, start=1):
             tabela.append({
-                'posicao' : posicao,
+                'posicao': posicao,
                 'nome': e.nome,
-                'pontos' :e.pontos,
-                'saldo': e.saldo_de_gols})
+                'pontos': e.pontos,
+                'saldo': e.saldo_de_gols
+            })
+
         return tabela
     
     def excluir_campeonato(self):

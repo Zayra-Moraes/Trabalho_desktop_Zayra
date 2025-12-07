@@ -1,5 +1,5 @@
 [
-      {
+    {
         "nome": "Zayra",
         "_idade": 19,
         "_cpf": 394823084,
@@ -103,5 +103,201 @@
         "_cpf": 34245325,
         "posicao": "central",
         "equipe": "santos"
+    },
+    {
+        "nome": "J1_Pal",
+        "_idade": 19,
+        "_cpf": 333311111,
+        "posicao": "ala",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J2_Pal",
+        "_idade": 20,
+        "_cpf": 333311112,
+        "posicao": "ponta",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J3_Pal",
+        "_idade": 21,
+        "_cpf": 333311113,
+        "posicao": "central",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J4_Pal",
+        "_idade": 22,
+        "_cpf": 333311114,
+        "posicao": "pivô",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J5_Pal",
+        "_idade": 23,
+        "_cpf": 333311115,
+        "posicao": "armador",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J6_Pal",
+        "_idade": 24,
+        "_cpf": 333311116,
+        "posicao": "ala",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J7_Pal",
+        "_idade": 25,
+        "_cpf": 333311117,
+        "posicao": "ala",
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "J1_Cor",
+        "_idade": 18,
+        "_cpf": 444411111,
+        "posicao": "ponta",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J2_Cor",
+        "_idade": 19,
+        "_cpf": 444411112,
+        "posicao": "ala",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J3_Cor",
+        "_idade": 20,
+        "_cpf": 444411113,
+        "posicao": "central",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J4_Cor",
+        "_idade": 21,
+        "_cpf": 444411114,
+        "posicao": "pivô",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J5_Cor",
+        "_idade": 22,
+        "_cpf": 444411115,
+        "posicao": "ala",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J6_Cor",
+        "_idade": 23,
+        "_cpf": 444411116,
+        "posicao": "armador",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J7_Cor",
+        "_idade": 24,
+        "_cpf": 444411117,
+        "posicao": "ala",
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "J1_Gre",
+        "_idade": 20,
+        "_cpf": 555511111,
+        "posicao": "armador",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J2_Gre",
+        "_idade": 21,
+        "_cpf": 555511112,
+        "posicao": "ponta",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J3_Gre",
+        "_idade": 22,
+        "_cpf": 555511113,
+        "posicao": "ala",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J4_Gre",
+        "_idade": 23,
+        "_cpf": 555511114,
+        "posicao": "central",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J5_Gre",
+        "_idade": 24,
+        "_cpf": 555511115,
+        "posicao": "ala",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J6_Gre",
+        "_idade": 25,
+        "_cpf": 555511116,
+        "posicao": "pivô",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J7_Gre",
+        "_idade": 26,
+        "_cpf": 555511117,
+        "posicao": "ala",
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "J1_Vas",
+        "_idade": 19,
+        "_cpf": 666611111,
+        "posicao": "ponta",
+        "equipe": "Vasco"
+    },
+    {
+        "nome": "J2_Vas",
+        "_idade": 20,
+        "_cpf": 666611112,
+        "posicao": "ala",
+        "equipe": "Vasco"
+    },
+    {
+        "nome": "J3_Vas",
+        "_idade": 21,
+        "_cpf": 666611113,
+        "posicao": "central",
+        "equipe": "Vasco"
+    },
+    {
+        "nome": "J4_Vas",
+        "_idade": 22,
+        "_cpf": 666611114,
+        "posicao": "pivô",
+        "equipe": "Vasco"
+    },
+    {
+        "nome": "J5_Vas",
+        "_idade": 23,
+        "_cpf": 666611115,
+        "posicao": "armador",
+        "equipe": "Vasco"
+    },
+    {
+        "nome": "J6_Vas",
+        "_idade": 24,
+        "_cpf": 666611116,
+        "posicao": "ala",
+        "equipe": "Vasco"
+    },
+    {
+        "nome": "J7_Vas",
+        "_idade": 25,
+        "_cpf": 666611117,
+        "posicao": "ala",
+        "equipe": "Vasco"
     }
 ]

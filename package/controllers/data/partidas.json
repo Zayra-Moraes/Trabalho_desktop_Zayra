@@ -1,3 +1,29 @@
 [
-
+    {
+        "id": 1,
+        "equipe1": "palmeiras",
+        "equipe2": "flamengo",
+        "campeonato": "Final_fours",
+        "vencedor": "flamengo",
+        "gols_e1": 0,
+        "gols_e2": 2
+    },
+    {
+        "id": 2,
+        "equipe1": "palmeiras",
+        "equipe2": "corinthians",
+        "campeonato": "Champions",
+        "vencedor": "palmeiras",
+        "gols_e1": 2,
+        "gols_e2": 1
+    },
+    {
+        "id": 3,
+        "equipe1": "palmeiras",
+        "equipe2": "flamengo",
+        "campeonato": "Final_fours",
+        "vencedor": "flamengo",
+        "gols_e1": 0,
+        "gols_e2": 2
+    }
 ]

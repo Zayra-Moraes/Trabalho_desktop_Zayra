@@ -3,14 +3,42 @@
         "nome": "t1",
         "_idade": 43,
         "_cpf": 43244,
-        "_licenca": 2345678901,
-        "equipe": "santos"
+        "equipe": "santos",
+        "licenca": 2345678901
     },
     {
         "nome": "t2",
         "_idade": 42,
         "_cpf": 34890,
-        "_licenca": 897822349,
-        "equipe": "flamengo"
+        "equipe": "flamengo",
+        "licenca": 897822349
+    },
+    {
+        "nome": "T3_Pal",
+        "_idade": 50,
+        "_cpf": 555003,
+        "_licenca": 900333333,
+        "equipe": "Palmeiras"
+    },
+    {
+        "nome": "T4_Cor",
+        "_idade": 48,
+        "_cpf": 555004,
+        "_licenca": 900444444,
+        "equipe": "Corinthians"
+    },
+    {
+        "nome": "T5_Gre",
+        "_idade": 52,
+        "_cpf": 555005,
+        "_licenca": 900555555,
+        "equipe": "Gremio"
+    },
+    {
+        "nome": "T6_Vas",
+        "_idade": 49,
+        "_cpf": 555006,
+        "_licenca": 900666666,
+        "equipe": "Vasco"
     }
 ]

@@ -2,10 +2,25 @@
     {
         "nome": "Champions",
         "partidas": [
+            2
+        ],
+        "equipes": [
+            "palmeiras",
+            "corinthians",
+            "gremio",
+            "vasco",
+            "santos",
+            "flamengo"
+        ]
+    },
+    {
+        "nome": "Final_fours",
+        "partidas": [
+            3
         ],
         "equipes": [
             "flamengo",
-            "Santos"
+            "palmeiras"
         ]
     }
 ]

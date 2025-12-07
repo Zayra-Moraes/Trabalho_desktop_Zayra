@@ -12,8 +12,8 @@
             "p7"
         ],
         "tecnico": "t2",
-        "pontos": 0,
-        "saldo_de_gols": 0
+        "pontos": 4,
+        "saldo_de_gols": 4
     },
     {
         "nome": "santos",
@@ -29,6 +29,70 @@
             "p13"
         ],
         "tecnico": "t1",
+        "pontos": 0,
+        "saldo_de_gols": 0
+    },
+    {
+        "nome": "Palmeiras",
+        "ano": 2025,
+        "jogadores": [
+            "J1_Pal",
+            "J2_Pal",
+            "J3_Pal",
+            "J4_Pal",
+            "J5_Pal",
+            "J6_Pal",
+            "J7_Pal"
+        ],
+        "tecnico": "T3_Pal",
+        "pontos": 6,
+        "saldo_de_gols": 6
+    },
+    {
+        "nome": "Corinthians",
+        "ano": 2024,
+        "jogadores": [
+            "J1_Cor",
+            "J2_Cor",
+            "J3_Cor",
+            "J4_Cor",
+            "J5_Cor",
+            "J6_Cor",
+            "J7_Cor"
+        ],
+        "tecnico": "T4_Cor",
+        "pontos": 0,
+        "saldo_de_gols": 0
+    },
+    {
+        "nome": "Gremio",
+        "ano": 2025,
+        "jogadores": [
+            "J1_Gre",
+            "J2_Gre",
+            "J3_Gre",
+            "J4_Gre",
+            "J5_Gre",
+            "J6_Gre",
+            "J7_Gre"
+        ],
+        "tecnico": "T5_Gre",
+        "pontos": 0,
+        "saldo_de_gols": 0
+    },
+    {
+        "nome": "Vasco",
+        "ano": 2024,
+        "jogadores": [
+            "J1_Vas",
+            "J2_Vas",
+            "J3_Vas",
+            "J4_Vas",
+            "J5_Vas",
+            "J6_Vas",
+            "J7_Vas"
+        ],
+        "tecnico": "T6_Vas",
         "pontos": 0,
         "saldo_de_gols": 0
     }

@@ -37,5 +37,13 @@ def atletas(): return ctl.render('atletas')
 @app.route('/cadastro/Técnicos', method='GET')
 def tecnicos(): return ctl.render('tecnicos')
 
+@app.route('/login', method='GET')
+def login(): return ctl.render('login')
+
+@app.route('/logout', method='GET')
+def logout(): return ctl.render('logout')
+
+@app.route('/cadastro',method='GET')
+def cadastro(): return ctl.render('cadastro')
 
 run(app, host='127.0.0.1', port=8080, debug=True,reloader=True)
