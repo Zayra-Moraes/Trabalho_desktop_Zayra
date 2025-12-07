@@ -119,23 +119,19 @@ class Campeonato():
             print(f"{posicao:<10}{e.nome:<15}{e.pontos:<10}{e.saldo_de_gols}")
 
     def tabela_de_posicoes(self):
-        # Lista de equipes **dentro do campeonato**
         equipes_campeonato = [
             EquipeCampeonato.find_equipe_campeonato(equipe, self.nome)
             for equipe in self.equipes
         ]
 
-        # remove possíveis None
         equipes_campeonato = [e for e in equipes_campeonato if e]
 
-        # Ordenar pelas pontuações DO CAMPEONATO
         ranking = sorted(
             equipes_campeonato,
             key=lambda e: (e.pontos, e.saldo_de_gols),
             reverse=True
         )
 
-        # Construir tabela
         tabela = []
         for posicao, e in enumerate(ranking, start=1):
             tabela.append({
