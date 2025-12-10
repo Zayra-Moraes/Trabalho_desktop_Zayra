@@ -70,5 +70,4 @@ bash python main.py
 ```
 
 
-## link do vídeo mostrando as funcionalidades: https://youtu.be/544yCM2EV9A
-
+## link do vídeo mostrando as funcionalidades: https://drive.google.com/file/d/1fH9FrVVuP8uFgUnK7zKTCFPJV7EjBfgc/view?usp=sharing
