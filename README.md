@@ -59,7 +59,7 @@ bash pip install bottle
 Para iniciar a aplicação web, execute o arquivo `app.py`:
 ```
 
-bash python app.py
+python app.py
 Em seguida, acesse no seu navegador: `http://127.0.0.1:8080/`
 ```
 ### 2. Interface Terminal (CLI)
